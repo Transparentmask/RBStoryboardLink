@@ -1,15 +1,15 @@
 Pod::Spec.new do |s|
-  s.name         = 'RBStoryboardLink'
-  s.version      = '0.1.4'
-  s.summary      = 'Makes transitioning between storyboards possible.'
-  s.homepage     = 'https://github.com/rob-brown/RBStoryboardLink'
+  s.name         = 'MVRBStoryboardLink'
+  s.version      = '0.1.5'
+  s.summary      = 'Makes transitioning between storyboards possible. Martin using and improve it.'
+  s.homepage     = 'https://github.com/Transparentmask/RBStoryboardLink'
   s.license      = {
     :type => 'MIT',
     :file => 'LICENSE'
   }
-  s.author       = 'Robert Brown'
+  s.author       = 'Robert Brown, Martin Yin'
   s.source       = {
-      :git => 'https://github.com/rob-brown/RBStoryboardLink.git',
+      :git => 'https://github.com/Transparentmask/RBStoryboardLink.git',
       :tag => s.version
   }
   s.platform     = :ios, '7.0'

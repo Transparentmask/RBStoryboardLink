@@ -145,7 +145,9 @@
     self.providesPresentationContextTransitionStyle = scene.providesPresentationContextTransitionStyle;
 
     // Grabs the popover properties.
-    self.preferredContentSize = scene.preferredContentSize;
+    if(![scene isKindOfClass:[UINavigationController class]]) {
+        self.preferredContentSize = scene.preferredContentSize;
+    }
     self.modalInPopover = scene.modalInPopover;
 
     // Grabs miscellaneous properties.
@@ -195,6 +197,9 @@
 
     // Adds the view controller as a child view.
     UIViewController * scene = self.scene;
+    if([scene isKindOfClass:[UINavigationController class]]) {
+        self.preferredContentSize = scene.preferredContentSize;
+    }
     [self addChildViewController:scene];
     [self.view addSubview:scene.view];
     [self.scene didMoveToParentViewController:self];
